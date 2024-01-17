@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import React from 'react'
 import gasuLogo from '/gasu.svg'
 import gorodLogo from '/gorod.svg'
 import './App.css'
+
+import Card from './Projects.jsx'
 
 function App() {
   return (
@@ -24,9 +26,18 @@ function App() {
           Tests
         </button>
       </div>
-      <p className="read-the-docs">
+      {/* <p className="read-the-docs">
         The project for students and teachers by SK Gorod
-      </p>
+      </p> */}
+      
+      <div>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
+
     </>
   )
 }
