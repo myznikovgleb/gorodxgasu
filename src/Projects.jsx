@@ -2,16 +2,16 @@ import React from 'react'
 import './Projects.css'
 
 
-function Card() {
+function Card(props) {
     return (
         <div className="card">
             <img src="/shpunt.jpg" className="card--image" />
             <div className="card--stats">
-                <span>Object's name</span>
+                <span>{props.name}</span>
                 <span className="gray"> • </span>
-                <span className="gray">Location</span>
+                <span className="gray">{props.location}</span>
             </div>
-            <p>Characteristics</p>
+            <p>{props.characteristics}</p>
         </div>
     )
 }

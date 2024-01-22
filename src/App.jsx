@@ -2,10 +2,20 @@ import React from 'react'
 import gasuLogo from '/gasu.svg'
 import gorodLogo from '/gorod.svg'
 import './App.css'
-
 import Card from './Projects.jsx'
+import data from './data.jsx'
 
 function App() {
+  const cards = data.map(item => {
+    return (
+      <Card 
+      name={item.name}
+      location={item.location}
+      characteristics={item.characteristics}
+      />
+      )
+    })
+  
   return (
     <>
       <div>
@@ -29,16 +39,11 @@ function App() {
       {/* <p className="read-the-docs">
         The project for students and teachers by SK Gorod
       </p> */}
-      
       <div>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {cards}
       </div>
-
     </>
+      
   )
 }
 
