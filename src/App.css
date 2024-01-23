@@ -18,20 +18,11 @@
   filter: drop-shadow(0 0 2em #fb8f61ec);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-
 .card {
   padding: 2em;
 }
 
-.read-the-docs {
+/* .read-the-docs {
   color: #888;
-}
+} */
 
