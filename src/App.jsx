@@ -1,11 +1,11 @@
 import React from 'react'
-// import gasuLogo from '/gasu.svg'
-// import gorodLogo from '/gorod.svg'
 import './App.css'
 import Card from './Projects.jsx'
 import datacards from './dataProjects.jsx'
 import Logos from './Logos.jsx'
 import datalogos from './dataLogos.jsx'
+import Buttons from './navButtons.jsx'
+import databuttons from './dataButtons.jsx'
 
 function App() {
   const cards = datacards.map(item => {
@@ -25,42 +25,27 @@ function App() {
       />
     )
   })
+  const buttons = databuttons.map(item => {
+    return (
+      <Buttons
+        style={item.style}
+        buttonName={item.buttonName}
+      />
+    )
+  })
     
+  return (
 
-    
-      // {/* <div>
-      //   <a href="https://www.sk-gorod.com/" target="_blank">
-      //     <img src={gorodLogo} className="logo" alt="Gorod logo" />
-      //   </a>
-      //   <a href="https://www.spbgasu.ru/" target="_blank">
-      //     <img src={gasuLogo} className="logo gasu" alt="Gasu logo" />
-      //   </a>
-      // </div> */}
-      // <>
-      // <h1>Gorod x Gasu</h1>
-      // <div className="card">
-      //   <button className="projectsButton">
-      //     Projects
-      //   </button>
-
-      //   <button className="testsButton">
-      //     Tests
-      //   </button>
-      // </div>
-      {/* <p className="read-the-docs">
+    <div>
+      {logos}
+      <h1 className="card">Gorod x Gasu</h1>
+      {buttons}
+      {cards}
+      <p className="read-the-docs">
         The project for students and teachers by SK Gorod
-      </p> */}
-      return (
-
-        <div>
-          {logos}
-          {cards}
-        </div>
-      )
-      
-    // </>
-      
-  
+      </p>
+    </div>
+    )
 }
 
 export default App
