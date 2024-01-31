@@ -1,4 +1,9 @@
 .card--image {
     width: 50%;
   }
-  
+
+  .card--stats {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+  }

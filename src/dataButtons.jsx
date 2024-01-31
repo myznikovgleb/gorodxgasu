@@ -9,9 +9,4 @@ export default [
         style: "testsButton",
         buttonName: "Tests",
     },
-    {
-        id: 3,
-        style: "testsButton",
-        buttonName: "3rd button",
-    }
 ]

@@ -4,15 +4,18 @@ import './Projects.css'
 
 function Card(props) {
     return (
-        <div className="card">
+        <div>
+            <div className="card">
             <img src="/shpunt.jpg" className="card--image" />
+            </div>
             <div className="card--stats">
                 <span>{props.name}</span>
                 <span className="gray"> • </span>
                 <span className="gray">{props.location}</span>
+                <p>{props.characteristics}</p>
             </div>
-            <p>{props.characteristics}</p>
         </div>
+        
     )
 }
 
