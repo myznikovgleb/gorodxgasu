@@ -50,7 +50,7 @@ h1 {
 }
 
 .projectsButton:hover {
-  border-color: #ff00aa;
+  border-color: #ffffff;
 }
 
 .testsButton {
@@ -67,7 +67,7 @@ h1 {
   margin-right: 10px;
 }
 .testsButton:hover {
-  border-color: #4c00ff;
+  border-color: #ffffff;
 }
 
 button:focus,

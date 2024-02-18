@@ -22,6 +22,14 @@
   padding: 15px;
 }
 
+.container {
+  height: 6em;
+}
+
+.text {
+  height: 6em;
+}
+
 /* .read-the-docs {
   color: #888;
 } */
