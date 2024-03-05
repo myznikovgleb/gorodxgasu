@@ -1,26 +1,20 @@
-.block{
-    height: 150px;
-    width:500px;
-    margin:0 auto;
-    background: #ee8080;
+.moving-text-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.moving-text {
+  white-space: nowrap;
+  animation: moveText 15s linear infinite;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(100%);
   }
-  .block h1{
-    text-align:center;
-    color:#27a559;
-    text-transform: uppercase;
-    padding-top: 35px;
-    animation: text 5s infinite linear;
-    padding-left: 100%;
-    white-space: nowrap;
+  100% {
+    transform: translateX(-100%);
   }
-  @keyframes text {
-    0%{
-      transform: translate(0, 0);
-    }
-    
-    100%{
-      transform: translate(-160%, 0);
-    }
-  }
+}
 
 

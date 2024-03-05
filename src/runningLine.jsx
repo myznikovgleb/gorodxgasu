@@ -2,24 +2,22 @@ import React from 'react'
 
 export default function Loader() {
     const style = {
-        height: '150px',
-        // width:'200px',
-        margin:'0 auto',
-        // background: 'green',
-        textAlign:'center',
+        //margin:'0 auto',
+        display: 'block',
+        background: 'green',
         color:'grey',
-        textTransform: 'uppercase',
-        // paddingTop: '10px',
-        animation: 'text 10s infinite linear',
-        paddingLeft: '100%',
+        animation: 'marquee 10s infinite linear',
+        //paddingLeft: '100%',
         whiteSpace: 'nowrap',
+        width: '100%',
     }
     return (
-        <div style={style}> <h1>Gorod X Gasu</h1>
+        <div style={style}> 
+        <h1>Gorod X Gasu Gorod X Gasu Gorod X Gasu</h1>
         <style>{`
-            @keyframes text {
+            @keyframes marquee {
                  0% { transform: translate(0, 0); }
-                 100% { transform: translate(-160%, 0); }
+                 100% { transform: translate(-100%, 0); }
             }
         `}</style>
         </div>

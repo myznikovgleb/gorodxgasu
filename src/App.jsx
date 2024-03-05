@@ -11,6 +11,8 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import Loader from './runningLine.jsx'
 //import './runningLine.css'
 //import { useLayoutEffect } from 'react'
+import MovingText from './tryRunningLine.jsx'
+import My3DModel from './ThreeDComponent.jsx';
 
 
 
@@ -24,18 +26,7 @@ function App() {
   const scrollTo = (target) => 
   gsap.to(window, { duration: 1, scrollTo: target });
 
-  //бегущая строка//
-  // const textRef = useRef(null);
-  // constspanRef = useRef(null);
-  // useLayoutEffect (() => {
-  //     gsap.fromTo(
-  //         textRef.current,
-  //             { x: -spanRef.current.clientWidth + "px" },
-  //             { x: 0, duration: 5, repeat: -1, ease: "none" }
-  //     );
-  // }, []);
-
-
+  
   const cards = datacards.map(item => {
     return (
       <Card 
@@ -62,29 +53,16 @@ function App() {
     
     <div>
 
-      
-      {/* <section>
-        <div className="container"> 
-
-          <p className="text" ref={textRef}>
-            <span ref={spanRef}>Hello, World!!! </span> 
-            <span>Hello,World!!!</span>
-            <span>Hello,World!!!</span>
-            <span>Hello,World!!!</span>
-            <span>Hello,World!!!</span>
-            <span>Hello,World!!!</span>
-            <span>Hello,World!!!</span>
-          </p>
-        
-        </div>
-      </section> */}
-            
-      
       {logos}
-
-      <Loader/>
-      {/* <h1 className="card block">Gorod x Gasu</h1> */}
       
+      <Loader/>
+
+      <MovingText />
+
+      {/* <My3DModel /> */}
+      
+      
+      <h1 className='card block'>Gorod X Gasu</h1>
 
       <button className="projectsButton">
         About us
