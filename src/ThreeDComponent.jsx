@@ -1,10 +1,7 @@
-import * as THREE from 'three';
-import React, { useEffect } from 'react';
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
+import { Canvas } from '@react-three/fiber'
+import { useFBX, OrbitControls } from '@react-three/drei'
 
 const My3DModel = () => {
-
-  
     useEffect(() => {
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
