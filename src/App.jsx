@@ -59,7 +59,7 @@ function App() {
 
       <MovingText />
 
-      {/* <My3DModel /> */}
+      <My3DModel />
       
       
       <h1 className='card block'>Gorod X Gasu</h1>

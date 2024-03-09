@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
 
 const My3DModel = () => {
+
+  
     useEffect(() => {
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
