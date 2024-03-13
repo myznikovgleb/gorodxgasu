@@ -12,7 +12,7 @@ import Loader from './runningLine.jsx'
 //import './runningLine.css'
 //import { useLayoutEffect } from 'react'
 import MovingText from './tryRunningLine.jsx'
-import My3DModel from './ThreeDComponent.jsx';
+import My3DModel from './ThreeDComponent.jsx'
 
 
 
@@ -78,8 +78,8 @@ function App() {
       
       <section ref={ artRef1 }>
 
-        {cards}
-
+        {cards} 
+        
       </section>
 
       <section ref={ artRef2 }>
