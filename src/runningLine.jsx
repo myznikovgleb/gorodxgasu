@@ -1,26 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import './runningLine.css';
 
-export default function Loader() {
-    const style = {
-        //margin:'0 auto',
-        display: 'block',
-        background: 'green',
-        color:'grey',
-        animation: 'marquee 10s infinite linear',
-        //paddingLeft: '100%',
-        whiteSpace: 'nowrap',
-        width: '100%',
-    }
-    return (
-        <div style={style}> 
-        <h1>Gorod X Gasu Gorod X Gasu Gorod X Gasu</h1>
-        <style>{`
-            @keyframes marquee {
-                 0% { transform: translate(0, 0); }
-                 100% { transform: translate(-100%, 0); }
-            }
-        `}</style>
-        </div>
-    )
+function RunningLine() {
+  const [text, setText] = useState('');
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((index) => index + 1);
+    }, 300);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const textArray = ['G', 'Go', 'Gor', 'Goro', 'Gorod', 'Gorodx', 'GorodxG', 'GorodxGa', 'GorodxGas', 'GorodxGasu'];
+    setText(textArray[index % textArray.length]);
+  }, [index]);
+
+  return (
+    <div className="RunningLine text" style={{ zIndex: 2 }}>
+      <h1 className='run'>{text}</h1>
+    </div>
+  );
 }
+
+export default RunningLine;
 

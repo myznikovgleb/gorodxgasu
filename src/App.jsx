@@ -8,8 +8,8 @@ import datalogos from './dataLogos.jsx'
 import { useRef } from 'react'
 import { gsap } from 'gsap'
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
-import Loader from './runningLine.jsx'
-//import './runningLine.css'
+import RunningLine from './runningLine.jsx'
+import './runningLine.css'
 //import { useLayoutEffect } from 'react'
 import MovingText from './tryRunningLine.jsx'
 import My3DModel from './ThreeDComponent.jsx'
@@ -55,14 +55,14 @@ function App() {
 
       {logos}
       
-      <Loader/>
+      <RunningLine/>
 
-      <MovingText />
+      {/* <MovingText /> */}
 
       <My3DModel />
       
       
-      <h1 className='card block'>Gorod X Gasu</h1>
+      <h1 className='card block' style={{ marginTop: '600px'}}>Gorod X Gasu</h1>
 
       <button className="projectsButton">
         About us

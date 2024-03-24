@@ -5,11 +5,11 @@ const My3DModel = () => {
   let fbx = useFBX('untitled.fbx')
 
   return (
-    <div style={{ width: '600px', height: '600px' }}>
+    <div style={{ paddingLeft: '200px', width: '50%', height: '600px', zIndex: 1, marginTop: '0', position: 'absolute', overflow: 'visible'}} className="model">
       <Canvas>
         <OrbitControls />
         <ambientLight intensity={0.1} />
-        <directionalLight color="blue" position={[10, 10, 10]} />
+        <directionalLight color="grey" position={[10, 10, 10]} />
         <primitive object={fbx} />
       </Canvas>
     </div>

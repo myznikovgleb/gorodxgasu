@@ -18,3 +18,35 @@
 }
 
 
+
+
+.RunningLine {
+  text-align: center;
+  font-family: 'Arial', 'Helvetica', 'sans-serif';
+}
+
+.run {
+  padding-top: 300px;
+  overflow: visible;
+  position:absolute;
+  font-size: 10em;
+  margin-top: 0;
+  color: #f3df03;
+  animation: slide 10s linear infinite;
+  /* background-color: rgb(255, 255, 255); */
+}
+
+.text {
+  position: relative;
+  z-index: 2;
+}
+
+/* @keyframes slide {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: -100%
+} */
+
+
