@@ -11,8 +11,9 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import RunningLine from './runningLine.jsx'
 import './runningLine.css'
 //import { useLayoutEffect } from 'react'
-import MovingText from './tryRunningLine.jsx'
+// import MovingText from './tryRunningLine.jsx'
 import My3DModel from './ThreeDComponent.jsx'
+import My3DModelTwo from './ThreeDComponentTwo.jsx'
 
 
 
@@ -60,6 +61,8 @@ function App() {
       {/* <MovingText /> */}
 
       <My3DModel />
+      
+      <My3DModelTwo />
       
       
       <h1 className='card block' style={{ marginTop: '600px'}}>Gorod X Gasu</h1>
