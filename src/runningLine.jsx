@@ -14,7 +14,7 @@ function RunningLine() {
   }, []);
 
   useEffect(() => {
-    const textArray = ['G', 'Go', 'Gor', 'Goro', 'Gorod', 'Gorodx', 'GorodxG', 'GorodxGa', 'GorodxGas', 'GorodxGasu'];
+    const textArray = ['Go', 'Gor', 'Goro', 'Gorod', 'Gorodx', 'GorodxG', 'GorodxGa', 'GorodxGas', 'GorodxGasu'];
     setText(textArray[index % textArray.length]);
   }, [index]);
 

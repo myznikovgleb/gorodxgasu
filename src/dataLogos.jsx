@@ -4,6 +4,7 @@ export default [
         siteLink: "https://www.sk-gorod.com/",
         imgLink: "/gorod.svg",
     },
+    
     {
         id: 2,
         siteLink: "https://www.spbgasu.ru/",
