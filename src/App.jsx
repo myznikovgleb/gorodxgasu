@@ -14,6 +14,7 @@ import './runningLine.css'
 // import MovingText from './tryRunningLine.jsx'
 import My3DModel from './ThreeDComponent.jsx'
 import My3DModelTwo from './ThreeDComponentTwo.jsx'
+import My3DModelThree from './ThreeDComponentThree.jsx'
 
 
 
@@ -63,6 +64,8 @@ function App() {
       <My3DModel />
       
       <My3DModelTwo />
+
+      <My3DModelThree />
       
       
       <h1 className='card block' style={{ marginTop: '600px'}}>Gorod X Gasu</h1>

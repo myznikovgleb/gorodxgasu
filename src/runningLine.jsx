@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './runningLine.css';
 
+
+
 function RunningLine() {
   const [text, setText] = useState('');
   const [index, setIndex] = useState(0);
@@ -25,5 +27,9 @@ function RunningLine() {
   );
 }
 
-export default RunningLine;
+
+
+
+export default RunningLine
+
 
