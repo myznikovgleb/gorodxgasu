@@ -7,21 +7,37 @@ import { useFBX, OrbitControls } from '@react-three/drei'
 const RotatingModel = ({ isRotating, setIsRotating }) => {
   let fbx = useFBX('nodeCorner.fbx');
   let modelRef = useRef();
+  const isPointerDown = useRef(false);
 
   useFrame(() => {
-    if (isRotating && modelRef.current) {
+    if (isRotating && !isPointerDown.current && modelRef.current) {
       modelRef.current.rotation.x += 0.01;
       // modelRef.current.rotation.y += 0.01;
       modelRef.current.rotation.z += 0.01;
     }
   });
 
-  const handleModelClick = () => {
-    setIsRotating(prevState => !prevState);
+  const handlePointerDown = () => {
+    isPointerDown.current = true;
+    setIsRotating(false);
   };
 
+  const handlePointerUp = () => {
+    isPointerDown.current = false;
+    setIsRotating(true);
+  }
+
+  // const handleModelClick = () => {
+  //   setIsRotating(prevState => !prevState);
+  // };
+
   return (
-    <primitive object={fbx} ref={modelRef} onClick={handleModelClick} />
+    <primitive object={fbx} 
+    ref={modelRef} 
+    // onClick={handleModelClick}
+    onPointerDown={handlePointerDown}
+    onPointerUp={handlePointerUp}
+    />
   );
 };
 
@@ -46,7 +62,8 @@ const RotatingModel = ({ isRotating, setIsRotating }) => {
         <OrbitControls />
         <ambientLight intensity={0.1} />
         <directionalLight color="grey" position={[10, 10, 10]} />
-        <RotatingModel isRotating={isRotating} setIsRotating={setIsRotating} />
+        <RotatingModel isRotating={isRotating} 
+        setIsRotating={setIsRotating} />
       </Canvas>
     </div>
   )

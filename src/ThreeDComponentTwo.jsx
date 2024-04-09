@@ -5,21 +5,38 @@ import { useFBX, OrbitControls } from '@react-three/drei'
 const RotatingModelTwo = ({isRotating, setIsRotating}) => {
   let fbx = useFBX('nodeMortgage.fbx')
   let modelRef = useRef();
+  const isPointerDown = useRef(false);
 
   useFrame(() => {
-    if (isRotating && modelRef.current) {
+    if (isRotating && !isPointerDown.current && modelRef.current) {
       modelRef.current.rotation.y += 0.01;
       // modelRef.current.rotation.z += 0.01;
       modelRef.current.rotation.x += 0.01;
     }
   });
 
-  const handleModelClick = () => {
-    setIsRotating(prevState => !prevState);
+  const handlePointerDown = () => {
+    isPointerDown.current = true;
+    setIsRotating(false);
   };
 
+  const handlePointerUp = () => {
+    isPointerDown.current = false;
+    setIsRotating(true);
+  };
+  
+
+  // const handleModelClick = () => {
+  //   setIsRotating(prevState => !prevState);
+  // };
+
   return (
-    <primitive object={fbx} ref={modelRef} onClick={handleModelClick}/>
+    <primitive object={fbx}
+     ref={modelRef} 
+    //  onClick={handleModelClick}
+    onPointerDown={handlePointerDown}
+    onPointerUp={handlePointerUp}
+    />
   );
 };
 

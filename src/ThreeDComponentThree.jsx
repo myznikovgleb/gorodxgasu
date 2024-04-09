@@ -5,6 +5,7 @@ import { useFBX, OrbitControls } from '@react-three/drei'
 const RotatingModelThree = ({isRotating, setIsRotating}) => {
   let fbx = useFBX('nodeTube.fbx')
   let modelRef = useRef();
+  const isPointerDown = useRef(false);
 
   useFrame(() => {
     if (isRotating && modelRef.current) {
@@ -14,11 +15,26 @@ const RotatingModelThree = ({isRotating, setIsRotating}) => {
     }
   });
 
-  const handleModelClick = () => {
-    setIsRotating(prevState => !prevState);
+  const handlePointerDown = () => {
+    isPointerDown.current = true;
+    setIsRotating(false);
   };
+
+  const handlePointerUp = () => {
+    isPointerDown.current = false;
+    setIsRotating(true);
+  };
+
+  // const handleModelClick = () => {
+  //   setIsRotating(prevState => !prevState);
+  // };
   return (
-    <primitive object={fbx} ref={modelRef} onClick={handleModelClick} />
+    <primitive object={fbx}
+     ref={modelRef} 
+    //  onClick={handleModelClick} 
+    onPointerDown={handlePointerDown}
+    onPointerUp={handlePointerUp}
+    />
   );
 };
 

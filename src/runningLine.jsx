@@ -21,7 +21,7 @@ function RunningLine() {
   }, [index]);
 
   return (
-    <div className="RunningLine text" style={{ zIndex: 2 }}>
+    <div className="RunningLine text" style={{ zIndex: 2, userSelect: 'none'}}>
       <h1 className='run'>{text}</h1>
     </div>
   );
