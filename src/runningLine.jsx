@@ -27,9 +27,6 @@ function RunningLine() {
   );
 }
 
-
-
-
 export default RunningLine
 
 

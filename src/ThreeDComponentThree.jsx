@@ -11,7 +11,6 @@ const RotatingModelThree = ({isRotating, setIsRotating}) => {
     if (isRotating && modelRef.current) {
       modelRef.current.rotation.z += 0.01;
       modelRef.current.rotation.x += 0.01;
-      modelRef.current.rotation.y += 0.01;
     }
   });
 
@@ -24,14 +23,9 @@ const RotatingModelThree = ({isRotating, setIsRotating}) => {
     isPointerDown.current = false;
     setIsRotating(true);
   };
-
-  // const handleModelClick = () => {
-  //   setIsRotating(prevState => !prevState);
-  // };
   return (
     <primitive object={fbx}
      ref={modelRef} 
-    //  onClick={handleModelClick} 
     onPointerDown={handlePointerDown}
     onPointerUp={handlePointerUp}
     />
@@ -62,4 +56,4 @@ const RotatingModelThree = ({isRotating, setIsRotating}) => {
   )
 }
   
-  export default My3DModelThree;
+export default My3DModelThree;

@@ -35,6 +35,7 @@ function App() {
         name={item.name}
         location={item.location}
         characteristics={item.characteristics}
+        link={item.link}
       />
     )
   })

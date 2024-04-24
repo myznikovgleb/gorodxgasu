@@ -1,9 +1,32 @@
-.card--image {
-    width: 50%;
-  }
+.card-container {
+  position: relative; 
+  display: inline-block;
+}
 
-  .card--stats {
-    font-weight: 500;
-    color: #646cff;
-    text-decoration: inherit;
-  }
+.card {
+  width: 100%; 
+}
+
+.card--image {
+  width: 50%;
+}
+
+.card--content {
+  position: absolute; 
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255, 0.8);
+  padding: 10px;
+}
+
+.card--stats {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+  margin-bottom: 10px;
+}
+
+.card--buttons {
+  text-align: center;
+}

@@ -10,7 +10,7 @@ const RotatingModelTwo = ({isRotating, setIsRotating}) => {
   useFrame(() => {
     if (isRotating && !isPointerDown.current && modelRef.current) {
       modelRef.current.rotation.y += 0.01;
-      // modelRef.current.rotation.z += 0.01;
+      modelRef.current.rotation.z += 0.01;
       modelRef.current.rotation.x += 0.01;
     }
   });
