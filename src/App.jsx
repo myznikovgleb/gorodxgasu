@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import './index.css'
 import Card from './Projects.jsx'
+
 import datacards from './dataProjects.jsx'
 import Logos from './Logos.jsx'
 import datalogos from './dataLogos.jsx'
@@ -15,6 +16,7 @@ import './runningLine.css'
 import My3DModel from './ThreeDComponent.jsx'
 import My3DModelTwo from './ThreeDComponentTwo.jsx'
 import My3DModelThree from './ThreeDComponentThree.jsx'
+// import ModelOpen from './OpenModel.jsx'
 
 
 
@@ -31,7 +33,7 @@ function App() {
   
   const cards = datacards.map(item => {
     return (
-      <Card 
+      <Card
         name={item.name}
         location={item.location}
         characteristics={item.characteristics}
@@ -82,6 +84,8 @@ function App() {
       <button className="testsButton" onClick={() => scrollTo(artRef2.current)}>
         Tests
       </button>
+
+      {/* <ModelOpen /> */}
       
       <section ref={ artRef1 }>
 

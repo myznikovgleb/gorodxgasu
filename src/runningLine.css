@@ -1,6 +1,7 @@
 .moving-text-container {
   width: 100%;
   overflow: hidden;
+  
 }
 
 .moving-text {
@@ -28,7 +29,8 @@
 .run {
   overflow: visible;
   position: absolute;
-  padding-left: 40px;
+  
+  padding-left: 125px;
   font-size: 10em;
   color: #f3df03;
   animation: slide 10s linear infinite;

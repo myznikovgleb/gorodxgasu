@@ -11,7 +11,6 @@ const RotatingModel = ({ isRotating, setIsRotating }) => {
 
   useFrame(() => {
     if (isRotating && !isPointerDown.current && modelRef.current) {
-      // modelRef.current.rotation.x += 0.01;
       modelRef.current.rotation.y += 0.01;
       modelRef.current.rotation.z += 0.01;
     }
@@ -27,14 +26,9 @@ const RotatingModel = ({ isRotating, setIsRotating }) => {
     setIsRotating(true);
   }
 
-  // const handleModelClick = () => {
-  //   setIsRotating(prevState => !prevState);
-  // };
-
   return (
     <primitive object={fbx} 
     ref={modelRef} 
-    // onClick={handleModelClick}
     onPointerDown={handlePointerDown}
     onPointerUp={handlePointerUp}
     />
@@ -43,7 +37,7 @@ const RotatingModel = ({ isRotating, setIsRotating }) => {
 
   const My3DModel = () => {
     const [isRotating, setIsRotating] = useState(true);
-    
+
     return (
   
     <div style={{ 
@@ -68,6 +62,5 @@ const RotatingModel = ({ isRotating, setIsRotating }) => {
     </div>
   )
 }
-  
   export default My3DModel;
 
