@@ -10,7 +10,7 @@
 
 .card--image {
   flex-wrap: wrap;
-  width: 500px;
+  width: 1000px;
   height: 500px;
   object-fit: cover;
 }

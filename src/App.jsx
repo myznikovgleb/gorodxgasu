@@ -10,13 +10,11 @@ import { useRef } from 'react'
 import { gsap } from 'gsap'
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import RunningLine from './runningLine.jsx'
-import './runningLine.css'
 //import { useLayoutEffect } from 'react'
 // import MovingText from './tryRunningLine.jsx'
 import My3DModel from './ThreeDComponent.jsx'
 import My3DModelTwo from './ThreeDComponentTwo.jsx'
 import My3DModelThree from './ThreeDComponentThree.jsx'
-// import ModelOpen from './OpenModel.jsx'
 
 
 
@@ -31,16 +29,16 @@ function App() {
   gsap.to(window, { duration: 1, scrollTo: target });
 
   
-  const cards = datacards.map(item => {
-    return (
-      <Card
-        name={item.name}
-        location={item.location}
-        characteristics={item.characteristics}
-        link={item.link}
-      />
-    )
-  })
+  // const cards = datacards.map(item => {
+  //   return (
+  //     <Card
+  //       name={item.name}
+  //       location={item.location}
+  //       characteristics={item.characteristics}
+  //       link={item.link}
+  //     />
+  //   )
+  // })
   const logos = datalogos.map(item => {
     return (
       <Logos
@@ -56,11 +54,12 @@ function App() {
     
   return (
     
-    <div>
+    <div style={{ margin: '2px'}}>
 
       {logos}
       
-      <RunningLine/>
+
+      <RunningLine />
 
       {/* <MovingText /> */}
 
@@ -71,8 +70,8 @@ function App() {
       <My3DModelThree />
       
       
-      <h1 className='card block' style={{ marginTop: '350px', userSelect: 'none'}}>Projects</h1>
-
+      <h1 className='card block' style={{ marginTop: '380px', userSelect: 'none', marginBottom: '0px',}}>Projects</h1>
+      <div>
       <button className="projectsButton">
         About us
       </button>
@@ -84,16 +83,17 @@ function App() {
       <button className="testsButton" onClick={() => scrollTo(artRef2.current)}>
         Tests
       </button>
-
-      {/* <ModelOpen /> */}
-      
+      </div>
+    
       <section ref={ artRef1 }>
 
-        {cards} 
+        {/* {cards}  */}
         
+        <Card />
+
       </section>
 
-      <section ref={ artRef2 }>
+      <section ref={ artRef2 } style={{ marginTop: '650px'}}>
 
         Test Section
 

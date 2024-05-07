@@ -1,4 +1,4 @@
-.moving-text-container {
+/* .moving-text-container {
   width: 100%;
   overflow: hidden;
   
@@ -11,43 +11,33 @@
 
 @keyframes moveText {
   0% {
-    transform: translateX(100%);
+    transform: translateX(50%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
-}
+} */
 
 
 
 
-.RunningLine {
-  text-align: center;
+.running {
+  position: absolute;
+  top: 150px;
+  left: 130px;
+  z-index: 2;
+  user-select: none;
+  /* text-align: center; */
   font-family: 'Arial', 'Helvetica', 'sans-serif';
 }
 
 .run {
   overflow: visible;
-  position: absolute;
-  
   padding-left: 125px;
   font-size: 10em;
   color: #f3df03;
   animation: slide 10s linear infinite;
   /* background-color: rgb(14, 232, 62); */
 }
-
-.text {
-  position: relative;
-  z-index: 2;
-}
-
-/* @keyframes slide {
-  0% {
-    margin-left: 100%;
-  }
-  100% {
-    margin-left: -100%
-} */
 
 

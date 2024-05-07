@@ -24,68 +24,38 @@ const ModelWindow = ({ isOpen, onClose }) => {
   };
   
   const Model = () => {
-    const fbx = useFBX('nodeCorner.fbx');
-  
+    const fbx = useFBX('nodeTube1.fbx');
     return <primitive object={fbx} />;
   };
   
-  const Card = (props) => {
+  const Card = () => {
     const [isWindowOpen, setIsWindowOpen] = useState(false);
   
     const handleToggleWindow = () => {
-      setIsWindowOpen((prevState => !prevState));
+      setIsWindowOpen(prevState => !prevState);
+      
+      
     };
   
     return (
       <div className="card-container">
         <div className="card">
-          <img src={props.link} className="card--image"/>
+          <img src='/shpunt.jpg' className="card--image"/>
         </div>
         <div className="card--content">
           <div className="card--stats">
-            <span>{props.name}</span>
+            <span>Наименование 1</span>
           </div>
           <div className="card--buttons">
             <button className='projectsButton' style={{ marginLeft: '40px' }}>Information</button>
             <button className='projectsButton' onClick={handleToggleWindow}>Show 3D model</button>
           </div>
-        </div>
-        <ModelWindow isOpen={isWindowOpen} />
+        </div> 
+        <ModelWindow isOpen={isWindowOpen} onClose={() => setIsWindowOpen(false)}/>
       </div>
     );
   };
   
   export default Card;
 
-  
-// function Card(props) {
-//     return (
-//         <div className="card-container">
-//             <div className="card">
-                
-//                 <img src={props.link} className="card--image"/>
-
-//             </div>
-//             <div className="card--content">
-//                 <div className="card--stats">
-//                     <span>{props.name}</span>
-//                     
-//                 </div>
-//                 <div className="card--buttons" >
-
-//                     <button className='projectsButton' style={{ marginLeft: '40px' }}>Information</button>
-
-                    
-
-//                     <button className='projectsButton'>Show 3D model</button>
-
-//                 </div>
-//             </div>
-//         </div>
-        
-//     )
-// }
-
-
-// export default Card
 

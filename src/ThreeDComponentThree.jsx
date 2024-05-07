@@ -38,7 +38,7 @@ const RotatingModelThree = ({isRotating, setIsRotating}) => {
     <div style={{ 
 
       width: '33%', 
-      height: '400px', 
+      height: '360px', 
       zIndex: 1, 
       position: 'absolute', 
       left: '66%',
