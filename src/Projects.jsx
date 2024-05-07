@@ -1,6 +1,7 @@
 import React, { useState }from 'react'
 import './Projects.css'
 import './index.css'
+// import './swipe.css'
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useFBX } from '@react-three/drei';
 
@@ -33,12 +34,17 @@ const ModelWindow = ({ isOpen, onClose }) => {
   
     const handleToggleWindow = () => {
       setIsWindowOpen(prevState => !prevState);
-      
-      
     };
+
   
+  
+    
+
+
+
+
     return (
-      <div className="card-container">
+      <div className= 'card-container'>
         <div className="card">
           <img src='/shpunt.jpg' className="card--image"/>
         </div>

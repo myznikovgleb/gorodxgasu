@@ -1,0 +1,27 @@
+.swipe {
+    width: 200px;
+    height: 300px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .swipe-content {
+    text-align: center;
+  }
+  
+  .active {
+    z-index: 1;
+  }
+  
+  .inactive {
+    z-index: 0;
+    opacity: 0;
+    transform: translateX(-100%);
+  }

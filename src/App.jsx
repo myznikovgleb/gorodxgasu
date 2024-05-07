@@ -1,9 +1,9 @@
 import React from 'react'
 import './App.css'
 import './index.css'
-import Card from './Projects.jsx'
-
-import datacards from './dataProjects.jsx'
+import Card from './Projects1.jsx'
+// import Swipe from './Swipe.jsx'
+// import datacards from './dataProjects.jsx'
 import Logos from './Logos.jsx'
 import datalogos from './dataLogos.jsx'
 import { useRef } from 'react'
@@ -48,9 +48,20 @@ function App() {
     )
   })
 
+//часть для свайпа//
+  // const [activeIndex, setActiveIndex] = useState(0);
 
+  // const swipes = ['Swipe']; 
 
+  // const handlePrev = () => {
+  //   setActiveIndex((prevIndex) => (prevIndex === 0 ? swipes.length - 1 : prevIndex - 1));
+  // };
+
+  // const handleNext = () => {
+  //   setActiveIndex((prevIndex) => (prevIndex === swipes.length - 1 ? 0 : prevIndex + 1));
+  // };
   
+//часть для свайпа//
     
   return (
     
@@ -88,7 +99,15 @@ function App() {
       <section ref={ artRef1 }>
 
         {/* {cards}  */}
-        
+
+        {/* <div className="swipe-container">
+      {swipes.map((content, index) => (
+        <Swipe key={index} content={content} isActive={index === activeIndex} />
+      ))}
+      <button onClick={handlePrev}>Prev</button>
+      <button onClick={handleNext}>Next</button>
+    </div> */}
+    
         <Card />
 
       </section>
