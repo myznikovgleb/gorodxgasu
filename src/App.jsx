@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState }from 'react'
 import './App.css'
 import './index.css'
-import Card from './Projects1.jsx'
+import Card from './Projects.jsx'
 // import Swipe from './Swipe.jsx'
 // import datacards from './dataProjects.jsx'
 import Logos from './Logos.jsx'
@@ -9,12 +9,13 @@ import datalogos from './dataLogos.jsx'
 import { useRef } from 'react'
 import { gsap } from 'gsap'
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
-import RunningLine from './runningLine.jsx'
+import RunningLine1 from './runningLine1.jsx'
 //import { useLayoutEffect } from 'react'
 // import MovingText from './tryRunningLine.jsx'
 import My3DModel from './ThreeDComponent.jsx'
 import My3DModelTwo from './ThreeDComponentTwo.jsx'
 import My3DModelThree from './ThreeDComponentThree.jsx'
+
 
 
 
@@ -28,17 +29,25 @@ function App() {
   const scrollTo = (target) => 
   gsap.to(window, { duration: 1, scrollTo: target });
 
+
+  //карточки//
+    const [currentCardIndex, setCurrentCardIndex] = useState(0);
   
-  // const cards = datacards.map(item => {
-  //   return (
-  //     <Card
-  //       name={item.name}
-  //       location={item.location}
-  //       characteristics={item.characteristics}
-  //       link={item.link}
-  //     />
-  //   )
-  // })
+    const handlePrev = () => {
+      setCurrentCardIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+    };
+  
+    const handleNext = () => {
+      setCurrentCardIndex((prevIndex) => Math.min(prevIndex + 1, cards.length - 1));
+    };
+  
+    const cards = [
+      { nameCard: "Наименование 1", imageUrl: "shpunt.jpg", modelName: "nodeMortgage1.fbx" },
+      { nameCard: "Наименование 2", imageUrl: "area.jpg", modelName: "nodeTube1.fbx" },
+    ];
+    //карточки//
+
+
   const logos = datalogos.map(item => {
     return (
       <Logos
@@ -47,21 +56,6 @@ function App() {
       />
     )
   })
-
-//часть для свайпа//
-  // const [activeIndex, setActiveIndex] = useState(0);
-
-  // const swipes = ['Swipe']; 
-
-  // const handlePrev = () => {
-  //   setActiveIndex((prevIndex) => (prevIndex === 0 ? swipes.length - 1 : prevIndex - 1));
-  // };
-
-  // const handleNext = () => {
-  //   setActiveIndex((prevIndex) => (prevIndex === swipes.length - 1 ? 0 : prevIndex + 1));
-  // };
-  
-//часть для свайпа//
     
   return (
     
@@ -70,9 +64,7 @@ function App() {
       {logos}
       
 
-      <RunningLine />
-
-      {/* <MovingText /> */}
+      <RunningLine1 />
 
       <My3DModel />
       
@@ -81,7 +73,7 @@ function App() {
       <My3DModelThree />
       
       
-      <h1 className='card block' style={{ marginTop: '380px', userSelect: 'none', marginBottom: '0px',}}>Projects</h1>
+      <h1 className='card block' style={{ marginTop: '100px', userSelect: 'none', marginBottom: '25px',}}>Projects</h1>
       <div>
       <button className="projectsButton">
         About us
@@ -97,18 +89,14 @@ function App() {
       </div>
     
       <section ref={ artRef1 }>
-
-        {/* {cards}  */}
-
-        {/* <div className="swipe-container">
-      {swipes.map((content, index) => (
-        <Swipe key={index} content={content} isActive={index === activeIndex} />
-      ))}
-      <button onClick={handlePrev}>Prev</button>
-      <button onClick={handleNext}>Next</button>
-    </div> */}
     
-        <Card />
+        <Card 
+          nameCard={cards[currentCardIndex].nameCard}
+          imageUrl={cards[currentCardIndex].imageUrl}
+          modelName={cards[currentCardIndex].modelName}
+          onPrev={handlePrev}
+          onNext={handleNext} 
+        />
 
       </section>
 
@@ -119,7 +107,7 @@ function App() {
       </section>
       
       <p className="read-the-docs">
-        The project for students and teachers by SK Gorod
+        The project for somebody by SK Gorod
       </p>
 
     </div>

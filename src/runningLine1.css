@@ -1,0 +1,16 @@
+.typing-demo {
+    z-index: 2;
+    color: yellow;
+    width: 16ch;
+    animation: typing 2.8s steps(16), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 9rem;
+    margin-top: 70px;
+}
+  @keyframes typing {
+    from {width: 0;}}
+  @keyframes blink {
+    50% {border-color: transparent;}}

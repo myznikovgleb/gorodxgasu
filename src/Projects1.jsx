@@ -1,4 +1,4 @@
-import React, { useState }from 'react'
+import React, { useState } from 'react'
 import './Projects.css'
 import './index.css'
 import { Canvas } from '@react-three/fiber';
@@ -22,9 +22,13 @@ const ModelWindow = ({ isOpen, onClose }) => {
       </div>
     );
   };
+
+
   
+
+
   const Model = () => {
-    const fbx = useFBX('nodeTube1.fbx');
+    const fbx = useFBX('nodeMortgage1.fbx');
     return <primitive object={fbx} />;
   };
 

@@ -47,7 +47,7 @@ const RotatingModelThree = ({isRotating, setIsRotating}) => {
       
       }} className="model">
       <Canvas>
-        <OrbitControls />
+        <OrbitControls enableZoom={false} />
         <ambientLight intensity={0.1} />
         <directionalLight color="grey" position={[10, 10, 10]} />
         <RotatingModelThree isRotating={isRotating} setIsRotating={setIsRotating}/>
