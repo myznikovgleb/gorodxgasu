@@ -16,12 +16,16 @@ import My3DModel from './ThreeDComponent.jsx'
 import My3DModelTwo from './ThreeDComponentTwo.jsx'
 import My3DModelThree from './ThreeDComponentThree.jsx'
 
+import { ThemeProvider } from './themeContext.jsx';
+import ThemeToggle from './toggleButton.jsx';
+import './stylesMode.css'
+
 
 
 
 
 function App() {
-  
+
   //скролл на нужный раздел//
   gsap.registerPlugin(ScrollToPlugin);
   const artRef1 = useRef(null);
@@ -58,11 +62,13 @@ function App() {
   })
     
   return (
-    
+    <ThemeProvider>
+
     <div style={{ margin: '2px'}}>
 
       {logos}
       
+      <ThemeToggle />
 
       <RunningLine1 />
 
@@ -73,7 +79,7 @@ function App() {
       <My3DModelThree />
       
       
-      <h1 className='card block' style={{ marginTop: '100px', userSelect: 'none', marginBottom: '25px',}}>Projects</h1>
+      <h1 className='card block' style={{ marginTop: '390px', userSelect: 'none', marginBottom: '25px',}}>Projects</h1>
       <div>
       <button className="projectsButton">
         About us
@@ -111,6 +117,7 @@ function App() {
       </p>
 
     </div>
+    </ThemeProvider>
     )
 }
 
