@@ -1,0 +1,47 @@
+.light-mode {
+    --bg-color: white;
+    --text-color: black;
+    --button-bg-color: #000000;
+    --button-text-color: rgb(255, 255, 255);
+    --content-bg-color: rgb(255, 255, 255, 0.8);
+    --model-bg-color: #fff;
+    --border-model: 1px solid #ccc;
+    --box-shadow-model: 0 0 10px rgb(4, 46, 15);
+  }
+  
+  .dark-mode {
+    --bg-color: #121212;
+    --text-color: white;
+    --button-bg-color: #ffffff;
+    --button-text-color: rgb(0, 0, 0);
+    --content-bg-color: rgba(31, 31, 31, 0.8);
+    --model-bg-color: #353333;
+    --border-model: 1px solid yellow;
+    --box-shadow-model: 0 0 10px yellow;
+    
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .projectsButton, .testsButton {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+  }
+  
+  .card--content {
+    background-color: var(--content-bg-color);
+  }
+
+  .model-window {
+    background-color: var(--model-bg-color);
+    border: var(--border-model);
+    box-shadow: var(--box-shadow-model);
+  }
+  /* Specific styles for components */
+  /* .card {
+    border: 1px solid var(--text-color);
+  } */
+

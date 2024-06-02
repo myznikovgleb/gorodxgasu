@@ -11,16 +11,7 @@
   will-change: filter;
   transition: filter 300ms;
 }
-/* .logo:hover {
-  filter: drop-shadow(0 0 2em #ef0707aa);
-}
-.logo.gasu:hover {
-  filter: drop-shadow(0 0 2em #fb8f61ec);
-} */
 
-/* .card {
-  padding: 15px;
-} */
 
 .container {
   height: 6em;
@@ -30,7 +21,10 @@
   height: 6em;
 }
 
-/* .read-the-docs {
-  color: #888;
-} */
+.logo:hover {
+  filter: drop-shadow(0 0 3em yellow);
+}
+.logo.gasu:hover {
+  filter: drop-shadow(0 0 3em yellow);
+}
 

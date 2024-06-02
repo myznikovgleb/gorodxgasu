@@ -1,24 +1,18 @@
-import React, { useState }from 'react'
+import React, { useState, useRef } from 'react'
 import './App.css'
 import './index.css'
 import Card from './Projects.jsx'
-// import Swipe from './Swipe.jsx'
-// import datacards from './dataProjects.jsx'
 import Logos from './Logos.jsx'
 import datalogos from './dataLogos.jsx'
-import { useRef } from 'react'
 import { gsap } from 'gsap'
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import RunningLine1 from './runningLine1.jsx'
-//import { useLayoutEffect } from 'react'
-// import MovingText from './tryRunningLine.jsx'
 import My3DModel from './ThreeDComponent.jsx'
 import My3DModelTwo from './ThreeDComponentTwo.jsx'
 import My3DModelThree from './ThreeDComponentThree.jsx'
-
-import { ThemeProvider } from './themeContext.jsx';
+import { ThemeProvider, useTheme } from './themeContext.jsx';
 import ThemeToggle from './toggleButton.jsx';
-import './stylesMode.css'
+import './darkLightMode.css'
 
 
 
@@ -32,6 +26,9 @@ function App() {
   const artRef2 = useRef(null);
   const scrollTo = (target) => 
   gsap.to(window, { duration: 1, scrollTo: target });
+
+  //смена svg картинок//
+  // const { isDarkMode } = useTheme();
 
 
   //карточки//
@@ -79,7 +76,7 @@ function App() {
       <My3DModelThree />
       
       
-      <h1 className='card block' style={{ marginTop: '390px', userSelect: 'none', marginBottom: '25px',}}>Projects</h1>
+      <h1 className='card block' style={{ marginTop: '390px', userSelect: 'none', marginBottom: '25px', border: 'none'}}>Projects</h1>
       <div>
       <button className="projectsButton">
         About us
@@ -94,17 +91,19 @@ function App() {
       </button>
       </div>
     
-      <section ref={ artRef1 }>
-    
+      <div ref={ artRef1 }>
+      {/* <div ref={ artRef1 } className={isDarkMode ? 'dark-mode' : 'light-mode'}> */}
+        
         <Card 
           nameCard={cards[currentCardIndex].nameCard}
           imageUrl={cards[currentCardIndex].imageUrl}
           modelName={cards[currentCardIndex].modelName}
           onPrev={handlePrev}
           onNext={handleNext} 
+          // isDarkMode={isDarkMode}
         />
 
-      </section>
+      </div>
 
       <section ref={ artRef2 } style={{ marginTop: '650px'}}>
 

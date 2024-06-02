@@ -3,6 +3,10 @@ import './Projects.css'
 import './index.css'
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useFBX } from '@react-three/drei';
+// import arrowBackLight from '/arrow_back.svg';
+// import arrowBackDark from '/arrow_back_black.svg';
+// import arrowForwardLight from '/arrow_forward.svg';
+// import arrowForwardDark from '/arrow_forward_black.svg';
 
 
 
@@ -28,7 +32,7 @@ const ModelWindow = ({ isOpen, onClose, modelPath }) => {
     return <primitive object={fbx} />;
   };
   
-  const Card = ({ nameCard, imageUrl, modelName, onPrev, onNext }) => {
+  const Card = ({ nameCard, imageUrl, modelName, onPrev, onNext, isDarkMode }) => {
     const [isWindowOpen, setIsWindowOpen] = useState(false);
   
     const handleToggleWindow = () => {
@@ -42,10 +46,12 @@ const ModelWindow = ({ isOpen, onClose, modelPath }) => {
         </div>
         <div>
             <button className="projectsButton prev-button" onClick={onPrev}>
-                <img src="arrow_back.svg"/>
+                {/* <img src={isDarkMode ? "/arrow_b_b.svg" : "/arrow_b.svg"} /> */}
+                <img src="/arrow_back_grey.svg" />
             </button>
             <button className="projectsButton forw-button" onClick={onNext}>
-                <img src="arrow_forward.svg"/>
+                {/* <img src={isDarkMode ? "/arrow_f_b.svg" : "/arrow_f.svg"} /> */}
+                <img src="/arrow_forward_grey.svg" />
             </button>
         </div>
         
@@ -62,27 +68,10 @@ const ModelWindow = ({ isOpen, onClose, modelPath }) => {
             </button>
             </div>
             </div>
-            {/* <div>
-            <button className="projectsButton prev-button" onClick={onPrev}>
-                <img src="arrow_back.svg"/>
-              </button>
-              <button className="projectsButton forw-button" onClick={onNext}>
-                <img src="arrow_forward.svg"/>
-              </button>
-            </div> */}
-          
-        
         <ModelWindow isOpen={isWindowOpen} onClose={() => setIsWindowOpen(false)} modelPath={modelName} />
-        {/* <button className="projectsButton" onClick={onPrev}>
-        <img src="arrow_back.svg"/>
-        </button>
-        <button className="projectsButton" onClick={onNext}>
-          <img src="arrow_forward.svg"/>
-        </button> */}
       </div>
     );
   };
-  
   export default Card;
 
 
