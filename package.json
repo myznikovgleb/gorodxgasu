@@ -2,7 +2,7 @@
   "name": "gorodxgasu",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://MaksimKrutin.github.io/gorodxgasu/",
+  "homepage": "https://MaksimKrutin.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
